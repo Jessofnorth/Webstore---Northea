@@ -6,3 +6,6 @@ Its a webstore that sells Tea and Tea accessories. The site has no underlying fu
 
 Link to live preview of project: https://northea.netlify.app/
 
+by Jessica Ejelöv, jessicaejelov@gmail.com
+
+
