@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!--  fonts from Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Northea</title>
+</head>
+
+
+<!-- body -->
+
+<body>
+    <!-- contains the width to max 1440px -->
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <nav>
+                <!-- nav hamburger button and basket -->
+                <button class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/northea_logo.svg" alt="Northea logotyp"></a>
+                <div class="menu">
+                    <a href="products.html">Produkter</a>
+                    <a href="about.html">Om webbplatsen</a>
+                    <a href="contact.html">Kontakt</a>
+                </div>
+                <a id="varukorg" class="basket" href="checkout.html" title="Varukorg/Kassa" aria-label="Varukorg/Kassa"><span class="fas fa-shopping-basket" title="Varukorg"></span></a>
+            </nav>
+        </header>
+
+
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="index.html">Hem</a>
+            <a href="products.html">Produkter</a>
+            <a href="about.html">Om webbplatsen</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="checkout.html">Varukorg</a>
+        </nav>
+
+
+        <!-- main content -->
+        <main>
+            <!-- article with text -->
+            <article>
+                <h2>OM WEBBPLATSEN</h2>
+                <h3>SLUTPROJEKT I DIGITAL BILDBEHANDLING FÖR WEBB, MITTUNIVERSITETET</h3>
+                <!-- addin margins and max width -->
+                <div class="text-sections">
+                    <p>Jag som utvecklat denna sida heter Jessica Ejelöv och är student på Webbutvecklings programmet på Mittuniversitetet. Jag går första året och denna webbplats är slutprojektet i kursen Bildbehandling för webb som avslutar den första
+                        terminen.
+                    </p>
+                    <p>Webbplatsen är en prototyp på en webbshop, men utan underliggande funktionalitet. Det går alltså inte att skicka meddelanden, göra beställningar eller ändra i varukorgen.</p>
+                    <h3>Kursens innehåll</h3>
+                    <p>Kursen har handlat om att hantera grafiska filer korrekt vid användning på webbplatser. Till exempel att använda rätt filformat, flera olika filformat, komprimering av filer samt enklare bildbehandling och video redigering. Kursen
+                        behandlar även planering av webbplatser med tillhörande designfiler så som sitemap, wireframes och designskisser. Samtliga av dessa har såklart skapats i detta projekt och inför skapandet av denna webbplats.
+                    </p>
+                </div>
+                <!-- images, WebP and JPG in different sizees -->
+                <picture class="about-img">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/jessica_mobile.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/jessica.webp">
+                    <source type="image/png" media="(max-width: 767px)" srcset="img/jessica_mobile.jpg">
+                    <img src="img/jessica.jpg" alt="Jessica på ett berg med vy över landskapet.">
+                </picture>
+                <!-- addin margins and max width -->
+                <div class="text-sections">
+                    <p>Bilden ovan är tillexempel inlagd i en picture tagg i två olika storlekar samt två olika filformat, JPG och WebP. Detta för att mobiler ska slippa hämta en onödigt stor fil för sin lilla skärm. Men att en datorskärm ändå ska få en
+                        bild i bra upplösning och storlek. </p>
+                    <h3>Webbplatsens syfte</h3>
+                    <p>Syftet med webbplatsen är att skapa ett fiktivt företag och skapa en webbshop med produkter till detta företag. Jag skapade Northea som säljer te blandningar och te tillbehör eftersom jag älskar te. </p>
+                    <p>
+                        Webbplatsen är uppbyggd med ”mobile first” samt CSS Grids som grund för layouten. Designen är ljus och enkel med fokus på produkterna och såklart även på grafikfilerna. Samtliga filer är framtagna så bra som möjligt med bra kvalitet på grundfiler så som
+                        fotografier och val av filformat samt komprimeringsgrader. Ikoner kommer från <a href="https://fontawesome.com/">Font Awesome</a>. Bildvisning kommer från <a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a>och
+                        typsnitt från <a href="https://fonts.google.com/">Google Fonts.</a> Video och fotografier på webbplatsen är tagna av mig, Jessica Ejelöv.</p>
+                    <h3>Vem är Jessica?</h3>
+                    <p>Jag är från Umeå och har vart intresserad av webbdesign sedan gymnasiet. Under bloggens guld-era designade jag allas och deras mosters bloggar. Men sedan bloggarna började dö ut så slutade jag utveckla tills denna utbildning. Nu ser
+                        jag fram emot att uppdatera kunskaperna samt lära mig massor med nya språk och tekniker. </p>
+                    <p>Pluggpauserna spenderar jag helst i skogen.</p>
+                </div>
+            </article>
+        </main>
+
+
+
+        <!-- footer with social media icons from font awesome -->
+        <footer>
+            <a href="contact.html" title="Kontakta oss" aria-label="Kontakt"><span class="some fas fa-envelope"
+                    title="Kontakt"></span></a>
+            <a id="Instagram" href="https://www.instagram.com/" title="Besök vår Instagram" aria-label="Instagram"><span
+                    class="some fab fa-instagram-square" title="Instagram"></span></a>
+            <a id="Facebook" href="https://www.facebook.com/" title="Besök vår Facebook" aria-label="Facebook"><span
+                    class="some fab fa-facebook-square" title="Facebook"></span></a>
+            <a id="Twitter" href="https://twitter.com/" title="Besök vår Twitter" aria-label="Twitter"><span
+                    class="some fab fa-twitter-square" title="Twitter"></span></a>
+            <p>Copyright Northea - Design Jessica Ejelöv - Icons by <a href="https://fontawesome.com/">Font Awesome</a></p>
+        </footer>
+    </div>
+
+
+
+    <!-- JS -->
+    <!-- fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/b16d647ed6.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js">
+    </script>
+
+</body>
+
+</html>

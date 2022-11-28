@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!--  fonts from Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Northea</title>
+</head>
+
+
+<!-- body -->
+
+<body>
+    <!-- contains width to max 1440px -->
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <nav>
+                <!-- nav hamburger button and basket -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/northea_logo.svg" alt="Northea logotyp"></a>
+                <div class="menu">
+                    <a href="products.html">Produkter</a>
+                    <a href="about.html">Om webbplatsen</a>
+                    <a href="contact.html">Kontakt</a>
+                </div>
+                <a id="varukorg" class="basket" href="checkout.html" title="Varukorg/Kassa" aria-label="Varukorg/Kassa"><span class="fas fa-shopping-basket" title="Varukorg"></span></a>
+            </nav>
+        </header>
+
+
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="index.html">Hem</a>
+            <a href="products.html">Produkter</a>
+            <a href="about.html">Om webbplatsen</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="checkout.html">Varukorg</a>
+        </nav>
+
+
+        <!-- main content -->
+        <main>
+            <article class="mobile-padding">
+                <h1>KONTAKTA OSS</h1>
+                <section class="text-sections">
+                    <p>Vi svarar inom 24 timmar på vardagar.</p>
+                    <p>Om ditt ärende gäller en order vänligen ange ditt ordernummer för snabbare hantering av ditt ärende. Du hittar ordernummret i orderbekräftelsen som skickades till din epostadress i samband med köpet.</p>
+                </section>
+                <!-- contact form -->
+                <section class="text-sections">
+                    <form class="contact-form" action="#">
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" placeholder="Jessica Ejelöv">
+                        <label for="email">Epost:</label>
+                        <input type="email" id="email" placeholder="jeej2100@student.miun.se">
+                        <label for="msg">Meddelande:</label>
+                        <textarea id="msg" style="height: 100px;" placeholder="Skriv ditt meddelande här.."></textarea>
+                        <input class="p-card-btn contact-btn" type="submit" value="SKICKA">
+                    </form>
+
+
+                </section>
+            </article>
+
+        </main>
+
+
+
+        <!-- footer with social media icons -->
+        <footer>
+            <a href="contact.html" title="Kontakta oss" aria-label="Kontakt"><span class="some fas fa-envelope"
+                    title="Kontakt"></span></a>
+            <a id="Instagram" href="https://www.instagram.com/" title="Besök vår Instagram" aria-label="Instagram"><span
+                    class="some fab fa-instagram-square" title="Instagram"></span></a>
+            <a id="Facebook" href="https://www.facebook.com/" title="Besök vår Facebook" aria-label="Facebook"><span
+                    class="some fab fa-facebook-square" title="Facebook"></span></a>
+            <a id="Twitter" href="https://twitter.com/" title="Besök vår Twitter" aria-label="Twitter"><span
+                    class="some fab fa-twitter-square" title="Twitter"></span></a>
+            <p>Copyright Northea - Design Jessica Ejelöv - Icons by <a href="https://fontawesome.com/">Font Awesome</a></p>
+        </footer>
+    </div>
+
+
+
+    <!--JS -->
+    <script src="JS/main.js">
+    </script>
+    <!-- fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/b16d647ed6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

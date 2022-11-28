@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!--  fonts from Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Northea</title>
+</head>
+
+
+<!-- body -->
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <nav>
+                <!-- nav hamburger button and basket -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/northea_logo.svg" alt="Northea logotyp"></a>
+                <div class="menu">
+                    <a href="products.html">Produkter</a>
+                    <a href="about.html">Om webbplatsen</a>
+                    <a href="contact.html">Kontakt</a>
+                </div>
+                <a id="varukorg" class="basket" href="checkout.html" title="Varukorg/Kassa" aria-label="Varukorg/Kassa"><span class="fas fa-shopping-basket" title="Varukorg"></span></a>
+            </nav>
+        </header>
+
+
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="index.html">Hem</a>
+            <a href="products.html">Produkter</a>
+            <a href="about.html">Om webbplatsen</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="checkout.html">Varukorg</a>
+        </nav>
+
+
+        <!-- main content -->
+        <main>
+
+
+
+            <!-- popular products section -->
+            <section>
+                <h1>PRODUKTER</h1>
+                <!-- entire product card is a link for easy clicking, imgaes in PNG/WebP in different sizes depending on screen  -->
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <a href="sil.html">
+                            <picture class="product-img">
+                                <source type="image/webp" media="(max-width: 767px)" srcset="img/sil_mobile.webp">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/sil_desktop.webp">
+                                <source type="image/png" media="(max-width: 767px)" srcset="img/sil_mobile.png">
+                                <img src="img/sil_desktop.png" alt="Tesil.">
+                            </picture>
+                            <h2 class="p-card-heading">Tesil</h2>
+                            <p class="p-card-price">89 kr</p>
+                        </a>
+                        <button name="varukorg" class="p-card-btn">LÄGG I VARUKORG</button>
+                    </article>
+                    <article class="product-card">
+                        <a href="kanna.html">
+                            <picture class="product-img">
+                                <source type="image/webp" media="(max-width: 767px)" srcset="img/kanna_mobile.webp">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/kanna_desktop.webp">
+                                <source type="image/png" media="(max-width: 767px)" srcset="img/kanna_mobile.png">
+                                <img src="img/kanna_desktop.png" alt="Tekanna i glas.">
+                            </picture>
+                            <h2 class="p-card-heading">Tekanna i glas</h2>
+                            <p class="p-card-price">299 kr</p>
+                        </a>
+                        <button name="varukorg" class="p-card-btn">LÄGG I VARUKORG</button>
+                    </article>
+                    <article class="product-card">
+                        <a href="temugg.html">
+                            <picture class="product-img">
+                                <source type="image/webp" media="(max-width: 767px)" srcset="img/temugg_mobile.webp">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/temugg_desktop.webp">
+                                <source type="image/png" media="(max-width: 767px)" srcset="img/temugg_mobile.png">
+                                <img src="img/temugg_desktop.png" alt="Temugg i glas med korkunderlägg.">
+                            </picture>
+                            <h2 class="p-card-heading">Temugg i glas</h2>
+                            <p class="p-card-price">129 kr</p>
+                        </a>
+                        <button name="varukorg" class="p-card-btn">LÄGG I VARUKORG</button>
+                    </article>
+                    <article class="product-card">
+                        <a href="northernlights.html">
+                            <picture class="product-img">
+                                <source type="image/webp" media="(max-width: 767px)" srcset="img/northernlights_mobile.webp">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/northernlights_desktop.webp">
+                                <source type="image/png" media="(max-width: 767px)" srcset="img/northernlights_mobile.png">
+                                <img src="img/northernlights_desktop.png" alt="Teblandning Northernlights.">
+                            </picture>
+                            <h2 class="p-card-heading">Northernlights svart te</h2>
+                            <p class="p-card-price">49 kr/hg</p>
+                        </a>
+                        <button name="varukorg" class="p-card-btn">LÄGG I VARUKORG</button>
+                    </article>
+                    <article class="product-card">
+                        <a href="underlagg.html">
+                            <picture class="product-img">
+                                <source type="image/webp" media="(max-width: 767px)" srcset="img/underlagg_mobile.webp">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/underlagg_desktop.webp">
+                                <source type="image/png" media="(max-width: 767px)" srcset="img/underlagg_mobile.png">
+                                <img src="img/underlagg_desktop.png" alt="Undelägg i ull.">
+                            </picture>
+                            <h2 class="p-card-heading">Underlägg i ull</h2>
+                            <p class="p-card-price">189 kr</p>
+                        </a>
+                        <button name="varukorg" class="p-card-btn">LÄGG I VARUKORG</button>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+
+
+        <!-- footer with social media icons from font awesome -->
+        <footer>
+            <a href="contact.html" title="Kontakta oss" aria-label="Kontakt"><span class="some fas fa-envelope"
+                    title="Kontakt"></span></a>
+            <a id="Instagram" href="https://www.instagram.com/" title="Besök vår Instagram" aria-label="Instagram"><span
+                    class="some fab fa-instagram-square" title="Instagram"></span></a>
+            <a id="Facebook" href="https://www.facebook.com/" title="Besök vår Facebook" aria-label="Facebook"><span
+                    class="some fab fa-facebook-square" title="Facebook"></span></a>
+            <a id="Twitter" href="https://twitter.com/" title="Besök vår Twitter" aria-label="Twitter"><span
+                    class="some fab fa-twitter-square" title="Twitter"></span></a>
+            <p>Copyright Northea - Design Jessica Ejelöv - Icons by <a href="https://fontawesome.com/">Font Awesome</a></p>
+        </footer>
+    </div>
+
+
+
+    <!-- custom JS -->
+
+    <script src="JS/main.js">
+    </script>
+    <!-- fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/b16d647ed6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

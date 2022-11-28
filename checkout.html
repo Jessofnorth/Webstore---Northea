@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!--  fonts from Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Northea</title>
+</head>
+
+
+<!-- body -->
+
+<body>
+    <!-- containing width of page to 1440px -->
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <nav>
+                <!-- nav hamburger button and basket -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/northea_logo.svg" alt="Northea logotyp"></a>
+                <div class="menu">
+                    <a href="products.html">Produkter</a>
+                    <a href="about.html">Om webbplatsen</a>
+                    <a href="contact.html">Kontakt</a>
+                </div>
+                <a id="varukorg" class="basket" href="checkout.html" title="Varukorg/Kassa" aria-label="Varukorg/Kassa"><span class="fas fa-shopping-basket" title="Varukorg"></span></a>
+            </nav>
+        </header>
+
+
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="index.html">Hem</a>
+            <a href="products.html">Produkter</a>
+            <a href="about.html">Om webbplatsen</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="checkout.html">Varukorg</a>
+        </nav>
+
+
+        <!-- main content -->
+        <main class="mobile-padding">
+            <!-- adding margins to article -->
+            <article class="text-sections">
+                <!-- Checkout section with products -->
+                <h1>VARUKORG</h1>
+                <section>
+                    <h2 class="confirmation">Din order:</h2>
+                    <div class="order-list-checkout">
+                        <span class="fas fa-times remove"></span>
+                        <p>Tekanna i glas</p>
+                        <p class="order-antal">1 st</p>
+                        <p class="order-price">299 kr</p>
+                        <span class="fas fa-times remove"></span>
+                        <p>Northernlights svart te</p>
+                        <p class="order-antal">1 hg</p>
+                        <p class="order-price">49 kr</p>
+                        <span class="fas fa-times remove"></span>
+                        <p>Tesil</p>
+                        <p class="order-antal">1 st</p>
+                        <p class="order-price">89 kr</p>
+                    </div>
+
+                </section>
+                <!-- shipping alternatives -->
+                <section class="order-options">
+                    <h2 class="confirmation">Fraktalternativ</h2>
+                    <input type="radio" id="postnord" name="frakt" value="PostNord" checked>
+                    <label for="postnord">PostNord - till ombud</label>
+                    <p>59 kr</p>
+                    <input type="radio" id="best" name="frakt" value="Best" checked>
+                    <label for="best">Best - hemleverans</label>
+                    <p>79 kr</p>
+
+                </section>
+                <!-- payment alternatives -->
+                <section class="order-options-pay">
+                    <h2 class="confirmation">Betalningsalternativ</h2>
+                    <input type="radio" id="faktura" name="pay" value="Faktura" checked>
+                    <label for="faktura"> Faktura - 14 dagar</label>
+                    <input type="radio" id="card" name="pay" value="Card" checked>
+                    <label for="card">Kortbetalning </label>
+                </section>
+                <!-- customer info for ordering -->
+                <section>
+                    <h2 class="confirmation">Dina uppgifter</h2>
+                    <form class="contact-form" action="#">
+                        <label for="email">Epost:</label>
+                        <input type="email" id="email" placeholder="jeej2100@student.miun.se">
+                        <label for="phone">Mobilnummer:</label>
+                        <input type="tel" id="phone" placeholder="0701234567">
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" placeholder="Jessica Ejelöv">
+                        <label for="adress">Adress:</label>
+                        <input type="text" id="adress" placeholder="Lövstigen 5E">
+                        <label for="zipcode">Postnummer:</label>
+                        <input type="text" id="zipcode" placeholder="90343">
+                        <label for="city">Ort:</label>
+                        <input type="text" id="city" placeholder="Umeå">
+                        <label for="msg">Meddelande:</label>
+                        <textarea id="msg" placeholder="Skriv meddelande här.."></textarea>
+
+                        <input class="villkor" type="checkbox" id="villkor" name="villkor" value="Villkor" checked>
+                        <label class="villkor" for="villkor">Jag accepterar köpvillkoren </label>
+                        <p class="villkor-link">Köpvillkor - Läs mer</p>
+
+                    </form>
+                    <h3 class="total-price-checkout">Totalt pris: 496 kr</h3>
+                    <a class="p-card-btn checkout-btn" href="confirmation.html">BESTÄLL</a>
+
+                </section>
+
+            </article>
+
+        </main>
+
+
+
+        <!-- footer with social media icons-->
+        <footer>
+            <a href="contact.html" title="Kontakta oss" aria-label="Kontakt"><span class="some fas fa-envelope"
+                    title="Kontakt"></span></a>
+            <a id="Instagram" href="https://www.instagram.com/" title="Besök vår Instagram" aria-label="Instagram"><span
+                    class="some fab fa-instagram-square" title="Instagram"></span></a>
+            <a id="Facebook" href="https://www.facebook.com/" title="Besök vår Facebook" aria-label="Facebook"><span
+                    class="some fab fa-facebook-square" title="Facebook"></span></a>
+            <a id="Twitter" href="https://twitter.com/" title="Besök vår Twitter" aria-label="Twitter"><span
+                    class="some fab fa-twitter-square" title="Twitter"></span></a>
+            <p>Copyright Northea - Design Jessica Ejelöv - Icons by <a href="https://fontawesome.com/">Font Awesome</a></p>
+        </footer>
+    </div>
+
+
+
+    <!-- JS -->
+    <script src="JS/main.js">
+    </script>
+    <!-- fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/b16d647ed6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

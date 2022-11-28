@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!--  fonts from Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- Lightbox2 / Jquery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <title>Northea</title>
+</head>
+
+
+<!-- body -->
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <nav>
+                <!-- nav hamburger button and basket -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/northea_logo.svg" alt="Northea logotyp"></a>
+                <div class="menu">
+                    <a href="products.html">Produkter</a>
+                    <a href="about.html">Om webbplatsen</a>
+                    <a href="contact.html">Kontakt</a>
+                </div>
+                <a id="varukorg" class="basket" href="checkout.html" title="Varukorg/Kassa" aria-label="Varukorg/Kassa"><span class="fas fa-shopping-basket" title="Varukorg"></span></a>
+            </nav>
+        </header>
+
+
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="index.html">Hem</a>
+            <a href="products.html">Produkter</a>
+            <a href="about.html">Om webbplatsen</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="checkout.html">Varukorg</a>
+        </nav>
+
+
+        <!-- main content -->
+        <main>
+
+
+
+            <!-- product information -->
+            <section>
+                <h1>TESIL</h1>
+                <!-- product with imgaes in Lightbox2, images in WebP/JPG/PNG in differens sizes depending on screen -->
+                <div class="spec-product-grid">
+                    <article class="product">
+                        <a href="img/sil_desktop.png" data-lightbox="Northea" data-title="Tesil.">
+                            <picture class="product-img">
+                                <source type="image/webp" media="(max-width: 767px)" srcset="img/sil_mobile.webp">
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/sil_desktop.webp">
+                                <source type="image/png" media="(max-width: 767px)" srcset="img/sil_mobile.png">
+                                <img src="img/sil_desktop.png" alt="Tesil.">
+                            </picture>
+                        </a>
+                        <!-- mini imgaes thats clickable for bigger versions -->
+
+                        <div class="prev">
+                            <a href="img/produktset_desktop.jpg" data-lightbox="Northea" data-title="Teset."> <img src="img/produktset_pre.jpg" alt="Bild på teset."> </a>
+                            <a href="img/mugg_detalj_desktop.jpg" data-lightbox="Northea" data-title="Detaljbild på produkter."><img src="img/mugg_detalj_pre.jpg" alt="Detaljbild på produkterna."></a>
+                        </div>
+
+                        <!--  add to cart button, select for number of items and price -->
+
+                        <div class="add-to-cart">
+                            <p class="price">89 kr</p>
+                            <div class="antal">
+                                <label for="antal">Antal:</label>
+                                <select name="Antal" id="antal">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <button name="varukorg" class="p-card-btn cart-btn">LÄGG I VARUKORG</button>
+                        </div>
+                        <!-- productinfo -->
+
+                        <article class="productinfo">
+                            <h2 class="product-title">PRODUKTINFORMATION</h2>
+                            <p>Tesil med tätt nät för att hålla tebladen från att sprida sig i kannan.</p>
+                            <p>Tesilen passar perfekt i locket på <a href="kanna.html">tekanna i glas</a>.</p>
+                            <p>Tesilen kan köras i diskmaskin. </p>
+                            <ul>
+                                <li>Höjd: 9cm.</li>
+                                <li>Diameter topp: 7,5cm.</li>
+                                <li>Diameter botten: 6cm.</li>
+                            </ul>
+
+
+                        </article>
+                        <!-- video -->
+
+                        <h3 class="video-heading">PRODUKTVIDEO</h3>
+                        <article class="video-product">
+
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5xHh6bt7VBU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </article>
+                    </article>
+
+
+
+                </div>
+            </section>
+        </main>
+
+
+
+        <!-- footer  with social media icons from font awesome-->
+        <footer>
+            <a href="contact.html" title="Kontakta oss" aria-label="Kontakt"><span class="some fas fa-envelope"
+                    title="Kontakt"></span></a>
+            <a id="Instagram" href="https://www.instagram.com/" title="Besök vår Instagram" aria-label="Instagram"><span
+                    class="some fab fa-instagram-square" title="Instagram"></span></a>
+            <a id="Facebook" href="https://www.facebook.com/" title="Besök vår Facebook" aria-label="Facebook"><span
+                    class="some fab fa-facebook-square" title="Facebook"></span></a>
+            <a id="Twitter" href="https://twitter.com/" title="Besök vår Twitter" aria-label="Twitter"><span
+                    class="some fab fa-twitter-square" title="Twitter"></span></a>
+            <p>Copyright Northea - Design Jessica Ejelöv - Icons by <a href="https://fontawesome.com/">Font Awesome</a></p>
+        </footer>
+    </div>
+
+
+
+    <!-- custom JS and Lightbox2/Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js" integrity="sha512-6gudNVbNM/cVsLUMOb8g2b/RBqtQJ3aDfRFgU+5paeaCTtbYY/Dg00MzZq7r6RvJGI2KKtPBhjkHGTL/iOe21A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS/main.js">
+    </script>
+    <!-- fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/b16d647ed6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

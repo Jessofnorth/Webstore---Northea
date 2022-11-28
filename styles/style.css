@@ -1,0 +1,744 @@
+        /* GENERAL STYLING
+        setting border-box for eisier styling
+        styling wrapper for containing a mac width
+        and extra padding for specidif sections*/
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-size: 1em;
+            background-color: white;
+        }
+        
+        .wrapper {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            min-height: 100vh;
+            padding-top: 4em;
+        }
+        
+        .mobile-padding {
+            padding: .5em;
+        }
+        
+        .text-sections {
+            padding: 1em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /* Text styling with fonts, some sizes and colors */
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            color: black;
+            text-align: center;
+        }
+        
+        p,
+        li,
+        label {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            font-size: 1em;
+            text-align: left;
+            line-height: 1.5em;
+        }
+        
+        p a {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #575756;
+            font-size: 1em;
+        }
+        
+        a,
+        a:visited {
+            font-family: 'Cabin', sans-serif;
+            color: #6B705D;
+            font-weight: 700;
+        }
+        
+        a:hover {
+            color: #575756;
+        }
+        /* center images */
+        
+        img {
+            margin: 0 auto;
+        }
+        /* NAVIGATION - header with mobile/desktop nav. In mobile a hamburger button with slide out menu. 
+In desktop a regular menu. */
+        
+        header {
+            position: fixed;
+            top: 0;
+            height: auto;
+            width: 100%;
+            background-color: white;
+            z-index: 99;
+            max-width: 1440px;
+        }
+        
+        nav {
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            height: 4em;
+            width: 100%;
+        }
+        
+        .logo {
+            height: 3em;
+            place-self: center;
+        }
+        
+        .basket {
+            font-size: 1.5em;
+            place-self: center;
+        }
+        /* Hamburger icon + animation */
+        
+        .hamburger {
+            position: relative;
+            display: block;
+            width: 33px;
+            height: 100%;
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            place-self: center;
+            padding: 0;
+        }
+        
+        .hamburger .bar,
+        .hamburger::after,
+        .hamburger::before {
+            width: 100%;
+            content: "";
+            display: block;
+            height: 4px;
+            background-color: #6B705D;
+            margin: 3px 0px;
+            transition: 0.4s;
+            border-radius: 99px;
+        }
+        /* animation of hamburger, rotate 2 bars and hide one */
+        
+        .hamburger.is-active::before {
+            transform: rotate(-45deg) translate(-2px, 6px);
+        }
+        
+        .hamburger.is-active::after {
+            transform: rotate(45deg) translate(-3px, -8px);
+        }
+        
+        .hamburger.is-active .bar {
+            opacity: 0;
+        }
+        /* drop-down part of mobile-nav 
+is out of sight until hamburger is clicked
+placed under the navbar so hamburger is still clickable */
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: 100%;
+            height: 100%;
+            width: 100%;
+            display: block;
+            z-index: 98;
+            background-color: #FDE7D7;
+            transition: 0.4s;
+            padding-top: 6em;
+        }
+        
+        .mobile-nav.is-active {
+            right: 0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 3%;
+            color: #6B705D;
+            font-size: 2em;
+            line-height: 2em;
+            font-weight: 700;
+        }
+        /* Hide desktop menu in mobile view */
+        
+        .menu {
+            display: none;
+        }
+        
+        .menu a {
+            color: #6B705D;
+            padding: 1% 3%;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin: 1%;
+            font-weight: 700;
+            place-self: center;
+        }
+        
+        .menu a:hover,
+        a:active {
+            color: #575756;
+            text-decoration: underline;
+        }
+        /* HERO - INDEX 
+with grid to place text on photo*/
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .herotext {
+            text-align: center;
+            grid-row: 1;
+            grid-column: 1;
+            place-self: center;
+        }
+        
+        .herotext1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2em;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px black;
+        }
+        
+        .herotext2 {
+            font-family: 'Cabin', sans-serif;
+            font-size: 1em;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px black;
+            letter-spacing: .05em;
+        }
+        
+        .heroimg {
+            grid-row: 1;
+            grid-column: 1;
+        }
+        
+        .hero img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+        }
+        /* PRODUCT GRIDS, 2 column for mobile, drop shadow on cards */
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        .spec-product-grid {
+            padding: 1em;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            padding: .5em;
+            border: solid 0.1em #F2F2F2;
+            border-radius: 1em;
+            box-shadow: 10px 10px 15px -6px rgba(87, 87, 86, 0.39);
+            text-align: center;
+        }
+        
+        .p-card-heading {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 400;
+            font-size: 1.2em;
+            height: 2em;
+        }
+        
+        .p-card-price {
+            color: black;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .product-card a {
+            text-decoration: none;
+        }
+        
+        .product-img img {
+            max-width: 500px;
+            height: auto;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+        /* button styling */
+        
+        .p-card-btn {
+            background-color: #46B1C9;
+            font-family: 'Cabin', sans-serif;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 5px 8px 10px -6px rgba(87, 87, 86, 0.39);
+            padding: 0.5em;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        /* video on index and on products */
+        
+        .video {
+            width: 100%;
+            max-width: 700px;
+            margin: 2em auto;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .video-product {
+            width: 100%;
+            max-width: 700px;
+            margin: .5em auto;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            position: relative;
+            height: auto;
+        }
+        
+        .video iframe,
+        object,
+        embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .video-product iframe,
+        object,
+        embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .video-heading {
+            margin-bottom: 0;
+            margin-top: 2em;
+        }
+        /* ABOUT SECTION */
+        
+        .about {
+            padding: 1em;
+            position: relative;
+        }
+        
+        .about-img img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            display: block;
+        }
+        /* SPECIFIC PRODUCTS with LIGHTBOX2, mini photos (prev) thats clickable for bigger versions */
+        
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #6B705D;
+            margin: 0 auto;
+        }
+        
+        .prev {
+            width: 230px;
+            height: auto;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            padding: .5em;
+        }
+        
+        .prev a {
+            place-self: center;
+        }
+        
+        .prev img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        
+        .productinfo {
+            padding: .5em;
+        }
+        
+        .product-title {
+            font-size: 1em;
+            text-align: left;
+            letter-spacing: .05em;
+        }
+        
+        .price {
+            color: black;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+        /* add to cart section with price. selectbox and button */
+        
+        .add-to-cart {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 30% 30% 40%;
+            text-align: left;
+            padding: .5em;
+            margin: 0 auto;
+            place-self: center;
+        }
+        
+        .antal {
+            place-self: center;
+            width: 100%;
+            padding: .8em;
+        }
+        
+        .antal select {
+            width: 4em;
+        }
+        
+        .cart-btn {
+            place-self: center;
+        }
+        /* CONFIRMATION */
+        
+        .confirmation {
+            text-align: left;
+            margin-top: 2em;
+        }
+        
+        .total-price {
+            text-align: right;
+        }
+        
+        .order-list {
+            display: grid;
+            grid-template-columns: 50% 30% 20%
+        }
+        
+        .order-antal {
+            text-align: center;
+        }
+        
+        .order-price {
+            justify-self: end;
+        }
+        
+        .conf-contact {
+            text-align: center;
+            margin-top: 2em;
+        }
+        /* CONTACT FORM */
+        
+        .contact-form {
+            margin: 2em auto 4em auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 35% 60%;
+            gap: 2% 5%;
+            overflow: visible;
+            padding-bottom: 1em;
+        }
+        
+        .contact-form label {
+            text-align: right;
+            display: block;
+            padding: 0;
+        }
+        
+        .contact-form input,
+        textarea {
+            margin-top: .5em;
+            padding-bottom: 1em;
+            padding: .5em;
+            resize: vertical;
+        }
+        
+        .contact-form textarea {
+            height: 5em;
+        }
+        
+        .contact-btn {
+            grid-column: 2;
+        }
+        /* CHECKOUT with radio buttons for options and checkbox for conditions
+        order button is a link but styled the same as buttons
+        grids for layouts*/
+        
+        .order-list-checkout {
+            display: grid;
+            grid-template-columns: 10% 50% 20% 20%
+        }
+        
+        .remove {
+            align-self: center;
+            justify-self: center;
+        }
+        
+        .order-options {
+            margin-top: 2em;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 10% 60% 20%;
+            gap: 5%;
+        }
+        
+        .order-options h2 {
+            grid-column: 1 / span 3;
+        }
+        
+        .order-options input,
+        label {
+            align-self: center;
+        }
+        
+        .order-options input {
+            justify-self: end;
+            margin: 0;
+        }
+        
+        .order-options p {
+            margin: 0;
+        }
+        
+        .order-options-pay {
+            margin-top: 2em;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 10% 85%;
+            gap: 5%;
+        }
+        
+        .order-options-pay h2 {
+            grid-column: 1/ span 2;
+        }
+        
+        .order-options-pay input {
+            justify-self: end;
+            margin: 0;
+        }
+        
+        .order-options-pay input,
+        label {
+            align-self: center;
+        }
+        
+        #villkor {
+            justify-self: end;
+            align-self: center;
+            margin: 0;
+        }
+        
+        p.villkor-link {
+            grid-column: 2;
+            text-decoration: underline;
+            color: #575756;
+            text-align: left;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        label.villkor {
+            margin: 0;
+            padding: 0;
+            justify-self: start;
+        }
+        
+        .checkout-btn {
+            width: 50%;
+            float: right;
+        }
+        
+        a.checkout-btn,
+        a:hover.checkout-btn,
+        a:visited.checkout-btn {
+            color: black;
+            font-size: 1em;
+            margin: auto 0;
+        }
+        
+        .total-price-checkout {
+            font-size: 2em;
+            text-align: right;
+            padding-top: 1em;
+        }
+        /* FOOTER */
+        
+        footer {
+            width: 100%;
+            position: relative;
+            background-color: #FDE7D7;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            padding-top: .5em;
+        }
+        
+        footer a {
+            color: #6B705D;
+            font-size: 1em;
+            place-self: center;
+            font-weight: 700;
+        }
+        
+        footer p {
+            font-size: .8em;
+            text-align: center;
+            grid-column: 1 / 5;
+            place-self: center;
+        }
+        /* social media icons */
+        
+        .some {
+            font-size: 2em;
+        }
+        /* TABLET DESING - chenge menu, text sizes and number of columns*/
+        
+        @media (min-width: 768px) {
+            .wrapper {
+                padding-top: 7em;
+            }
+            /* MENU */
+            .mobile-nav {
+                display: none;
+            }
+            .hamburger {
+                display: none;
+            }
+            /* showing desktop menu */
+            .menu {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                align-self: center;
+                text-align: center;
+                width: 100%;
+                padding: 1em;
+            }
+            nav {
+                grid-template-columns: 30% 60% 10%;
+                height: 7em;
+                width: 100%;
+                max-width: 1440px;
+            }
+            .logo {
+                height: 4em;
+                align-self: center;
+                justify-self: start;
+                padding-left: .5em
+            }
+            .basket {
+                font-size: 3em;
+                padding-right: .5em;
+                align-self: center;
+                justify-self: end;
+            }
+            /* HERO */
+            .heroimg {
+                display: block;
+                margin: 0 auto;
+            }
+            .herotext1 {
+                font-size: 3em;
+            }
+            .herotext2 {
+                font-size: 2em;
+            }
+            /* ABOUT - INDEX */
+            .about {
+                padding: 1em;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            /* PRODUCT GRID 3 columns on bigger screens */
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .p-card-heading {
+                font-size: 1.5em;
+                height: 2em;
+            }
+            .p-card-price {
+                font-size: 1.5em;
+            }
+            /* SPECIFIC PRODUCTS different max widths on images */
+            .spec-product-grid {
+                max-width: 1200px;
+                padding: 1em;
+            }
+            .productinfo {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .add-to-cart {
+                max-width: 500px;
+            }
+            .product img {
+                max-width: 500px;
+                height: auto;
+            }
+            .contact-form {
+                grid-template-columns: 15% 80%;
+            }
+            /* CHECKOUT */
+            .checkout-btn {
+                margin-left: 60%;
+            }
+            /* FOOTER */
+            footer a {
+                font-size: 1em;
+            }
+            footer p {
+                font-size: 1em;
+            }
+            /* video */
+            .video {
+                padding-bottom: 52%;
+            }
+            .video-product {
+                padding-bottom: 53%;
+            }
+        }
+        /* specific for reducing black edges on embedded video on bigger screens */
+        
+        @media (min-width:1080px) {
+            .video {
+                padding-bottom: 27.5%;
+            }
+            .video-product {
+                padding-bottom: 33%;
+            }
+        }
